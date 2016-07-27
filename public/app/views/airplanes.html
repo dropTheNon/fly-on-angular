@@ -1,0 +1,18 @@
+<div>
+  <div class="well" ng-repeat="airplane in airplanes track by $index">
+    <h3>{{airplane.manufacturer}} - {{airplane.model}}</h3>
+    <p>The {{airplane.model}}, built by {{airplane.manufacturer}}, has {{airplane.engines}} engines.</p>
+    <button class="btn btn-danger" ng-click="delete(airplane._id, $index)">Delete</button>
+    <button class="btn btn-info" ng-click="edit(airplane._id, $index)">Edit</button>
+  </div>
+
+  <form class="form-group" ng-submit="add()">
+    <label for="manufacturer">Manufacturer</label>
+    <input class="form-control" type="text" name="manufacturer" ng-model="airplane.manufacturer">
+    <label for="model">Model</label>
+    <input class="form-control" type="text" name="model" ng-model="airplane.model">
+    <label for="engines">Engines</label>
+    <input class="form-control" type="integer" name="engines" ng-model="airplane.engines">
+    <input class="form-control btn btn-primary" type="submit">
+  </form>
+</div>

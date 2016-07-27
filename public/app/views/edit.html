@@ -1,0 +1,7 @@
+<h2>Edit {{airplane.manufacturer}} {{airplane.model}}</h2>
+<form class="form-group" ng-click="update(airplane._id, $index)">
+  <input type="text" ng-model="airplane.manufacturer">
+  <input type="text" ng-model="airplane.model">
+  <input type="integer" ng-model="airplane.engines">
+  <input type="submit" class="btn btn-primary">
+</form>
